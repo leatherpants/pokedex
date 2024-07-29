@@ -1,10 +1,19 @@
 .header {
-  background-color: var(--secondary-container);
+  display: flow-root;
+  padding: 20px;
+  background-color: var(--primary-container);
 
   &__title {
-    background-color: var(--primary-container);
+    float: left;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     color: var(--on-primary-container);
   }
 
-  &__toggle {}
+  &__toggle {
+    float: right;
+    margin-right: 50px;
+    margin-block: auto;
+  }
 }

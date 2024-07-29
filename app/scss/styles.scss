@@ -1,2 +1,6 @@
 @use 'components';
 @use 'globals';
+
+body {
+  background-color: var(--surface);
+}

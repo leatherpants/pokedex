@@ -1,9 +1,35 @@
 .search {
-  &__form {}
+  &__form {
+    display: grid;
+    grid-template-areas:
+      "label label "
+      "input button";
+    justify-content: center;
+    font-size: 1.3rem;
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-  &__title {}
+  &__title {
+    grid-area: label;
+    font-weight: 700;
+    text-align: center;
+  }
 
-  &__input {}
+  &__input {
+    grid-area: input;
+    border-radius: 20px;
+    border: 1px solid darkgray;
+    padding: 10px;
+    text-align: center;
+  }
 
-  &__submit {}
+  &__submit {
+    grid-area: button;
+    border-radius: 20px;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px;
+    border: none;
+  }
 }

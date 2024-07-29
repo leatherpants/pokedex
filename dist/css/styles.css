@@ -1,1 +1,176 @@
-/*# sourceMappingURL=styles.css.map */
+.header {
+  display: flow-root;
+  padding: 20px;
+  background-color: var(--primary-container);
+}
+.header__title {
+  float: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--on-primary-container);
+}
+.header__toggle {
+  float: right;
+  margin-right: 50px;
+  margin-block: auto;
+}
+
+.main {
+  width: 50vw;
+  max-width: 600px;
+  min-width: 300px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border: 5px solid var(--frame);
+  box-shadow: 10px 10px 0 0 var(--primary);
+}
+
+.search__form {
+  display: grid;
+  grid-template-areas: "label label " "input button";
+  justify-content: center;
+  font-size: 1.3rem;
+  gap: 10px;
+  margin-top: 10px;
+}
+.search__title {
+  grid-area: label;
+  font-weight: 700;
+  text-align: center;
+}
+.search__input {
+  grid-area: input;
+  border-radius: 20px;
+  border: 1px solid darkgray;
+  padding: 10px;
+  text-align: center;
+}
+.search__submit {
+  grid-area: button;
+  border-radius: 20px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 10px;
+  border: none;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+  margin-top: 3px;
+}
+.toggle__label {
+  line-height: 30px;
+  font-weight: 600;
+}
+.toggle__wrapper {
+  position: relative;
+}
+.toggle__radio {
+  width: 30px;
+  height: 30px;
+  margin-right: -4px;
+}
+.toggle__background {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  border: 1px solid var(--toggle-bg);
+  background-color: var(--toggle-bg);
+  pointer-events: none;
+}
+.toggle__button {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background-color: var(--toggle-btn);
+}
+
+:root {
+  --fairy: #EE99EE;
+  --steel: #AAAABB;
+  --dark: #775544;
+  --dragon: #7766EE;
+  --ghost: #6666BB;
+  --rock: #BBAA66;
+  --bug: #AABB22;
+  --psychic: #FF5599;
+  --flying: #8899FF;
+  --ground: #DDBB55;
+  --poison: #AA5599;
+  --fighting: #BB5544;
+  --ice: #66CCFF;
+  --grass: #77CC55;
+  --electric: #FFCC33;
+  --water: #3399FF;
+  --fire: #FF4422;
+  --normal: #AAAA99;
+  --type-color: var(--normal);
+  --light-surface: #f9faef;
+  --light-on-surface: #1a1c16;
+  --light-primary-container: #cdeda3;
+  --light-on-primary-container: #102000;
+  --light-secondary-container: #dce7c8;
+  --light-primary: #4c662b;
+  --light-on-primary: #ffffff;
+  --light-frame: black;
+  --dark-surface: #12140e;
+  --dark-on-surface: #e2e3d8;
+  --dark-primary-container: #354e16;
+  --dark-on-primary-container: #cdeda3;
+  --dark-secondary-container: #404a33;
+  --dark-primary: #b1d18a;
+  --dark-on-primary: #1f3701;
+  --dark-frame: white;
+  --surface: var(--light-surface);
+  --on-surface: var(--light-on-surface);
+  --primary-container: var(--light-primary-container);
+  --on-primary-container: var(--light-on-primary-container);
+  --secondary-container: var(--light-secondary-container);
+  --primary: var(--light-primary);
+  --on-primary: var(--light-on-primary);
+  --toggle-bg: var(--light-primary);
+  --toggle-btn: var(--light-surface);
+  --frame: var(--light-frame);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-size: inherit;
+}
+
+.offscreen {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  top: auto;
+  left: -10000px;
+}
+
+body {
+  background-color: var(--surface);
+}/*# sourceMappingURL=styles.css.map */

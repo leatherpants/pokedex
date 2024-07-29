@@ -20,19 +20,23 @@
 
   --type-color: var(--normal);
 
-  --light-surface: #12140e;
+  --light-surface: #f9faef;
   --light-on-surface: #1a1c16;
   --light-primary-container: #cdeda3;
   --light-on-primary-container: #102000;
   --light-secondary-container: #dce7c8;
   --light-primary: #4c662b;
+  --light-on-primary: #ffffff;
+  --light-frame: black;
 
-  --dark-surface: #f9faef;
+  --dark-surface: #12140e;
   --dark-on-surface: #e2e3d8;
   --dark-primary-container: #354e16;
   --dark-on-primary-container: #cdeda3;
   --dark-secondary-container: #404a33;
   --dark-primary: #b1d18a;
+  --dark-on-primary: #1f3701;
+  --dark-frame: white;
 
 
   --surface: var(--light-surface);
@@ -41,4 +45,8 @@
   --on-primary-container: var(--light-on-primary-container);
   --secondary-container: var(--light-secondary-container);
   --primary: var(--light-primary);
+  --on-primary: var(--light-on-primary);
+  --toggle-bg: var(--light-primary);
+  --toggle-btn: var(--light-surface);
+  --frame: var(--light-frame);
 }
