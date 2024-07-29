@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pok&eacute;Dex</title>
+  <link rel="stylesheet" href="dist/css/styles.css">
+  <script type="module" src="dist/js/script.js" defer></script>
 </head>
 
 <body>
@@ -14,8 +16,8 @@
       <label for="dark" class="toggle__label">Dark Mode <span class="offscreen">On</span></label>
       <label for="light" class="toggle__label offscreen">Dark Mode Off</label>
       <div class="toggle__wrapper">
-        <input type="checkbox" name="theme" id="dark" class="toggle__check">
-        <input type="checkbox" name="theme" id="light" class="toggle__check">
+        <input type="radio" name="theme" id="dark" class="toggle__radio">
+        <input type="radio" name="theme" id="light" class="toggle__radio">
         <div class="toggle__background"></div>
         <div class="toggle__button"></div>
       </div>

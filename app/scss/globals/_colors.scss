@@ -1,0 +1,44 @@
+:root {
+  --fairy: #EE99EE;
+  --steel: #AAAABB;
+  --dark: #775544;
+  --dragon: #7766EE;
+  --ghost: #6666BB;
+  --rock: #BBAA66;
+  --bug: #AABB22;
+  --psychic: #FF5599;
+  --flying: #8899FF;
+  --ground: #DDBB55;
+  --poison: #AA5599;
+  --fighting: #BB5544;
+  --ice: #66CCFF;
+  --grass: #77CC55;
+  --electric: #FFCC33;
+  --water: #3399FF;
+  --fire: #FF4422;
+  --normal: #AAAA99;
+
+  --type-color: var(--normal);
+
+  --light-surface: #12140e;
+  --light-on-surface: #1a1c16;
+  --light-primary-container: #cdeda3;
+  --light-on-primary-container: #102000;
+  --light-secondary-container: #dce7c8;
+  --light-primary: #4c662b;
+
+  --dark-surface: #f9faef;
+  --dark-on-surface: #e2e3d8;
+  --dark-primary-container: #354e16;
+  --dark-on-primary-container: #cdeda3;
+  --dark-secondary-container: #404a33;
+  --dark-primary: #b1d18a;
+
+
+  --surface: var(--light-surface);
+  --on-surface: var(--light-on-surface);
+  --primary-container: var(--light-primary-container);
+  --on-primary-container: var(--light-on-primary-container);
+  --secondary-container: var(--light-secondary-container);
+  --primary: var(--light-primary);
+}
