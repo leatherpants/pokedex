@@ -1,35 +1,51 @@
+@use '../utils' as *;
+
 .search {
+  $border-radius: rem(20);
+  $padding-block: rem(7);
+  $padding-inline: rem(10);
+
+
   &__form {
-    display: grid;
-    grid-template-areas:
-      "label label "
-      "input button";
-    justify-content: center;
-    font-size: 1.3rem;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    margin-top: rem(10);
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(10);
+    }
   }
 
   &__title {
-    grid-area: label;
+    font-size: 1.2rem;
     font-weight: 700;
     text-align: center;
   }
 
   &__input {
-    grid-area: input;
-    border-radius: 20px;
+    border-radius: $border-radius;
     border: 1px solid darkgray;
-    padding: 10px;
+    padding: $padding-block $padding-inline;
     text-align: center;
+    transition: all 100ms ease-in-out;
+
   }
 
   &__submit {
-    grid-area: button;
-    border-radius: 20px;
+    border-radius: $border-radius;
     background-color: var(--primary);
     color: var(--on-primary);
-    padding: 10px;
+    padding: $padding-block $padding-inline;
     border: none;
+    transition: all 100ms ease-in-out;
+
+  }
+
+  &__submit:hover {
+    filter: brightness(1.3)
   }
 }

@@ -1,15 +1,49 @@
+@use '../utils' as *;
+
 .hero {
-  &__img {}
+
+  padding-inline: 10%;
+
+  &__img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
 
   &__wave {}
 
-  &__name {}
+  &__name {
+    text-transform: uppercase;
+  }
 
-  &__id {}
+  &__id {
+    margin-top: rem(10);
+    font-weight: 600;
+  }
 
-  &__types {}
+  &__types {
+    display: flex;
+    gap: rem(10);
+    margin-top: rem(20);
+  }
 
-  &__type {}
+  &__type {
+    padding: rem(5);
+  }
 
-  &__type-name {}
+  &__type-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+  }
+
+  $types: fairy, steel, dark, dragon, ghost, rock, bug, psychic, flying, ground, poison, fighting, ice, grass, electric, water, fire, normal;
+
+  @each $type in $types {
+    &__type--#{$type} {
+      background-color: var(--#{$type});
+    }
+  }
 }

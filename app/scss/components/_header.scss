@@ -1,19 +1,27 @@
+@use '../utils' as *;
+
 .header {
-  display: flow-root;
-  padding: 20px;
+  display: flex;
+  padding-block: rem(20);
+  justify-content: space-around;
+  align-items: center;
   background-color: var(--primary-container);
 
+  @media only screen and (max-width: 710px) {
+    flex-direction: column;
+
+    &__toggle {
+      margin-top: rem(10);
+    }
+
+    .unvisible {
+      display: none;
+    }
+  }
+
   &__title {
-    float: left;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     color: var(--on-primary-container);
   }
 
-  &__toggle {
-    float: right;
-    margin-right: 50px;
-    margin-block: auto;
-  }
+  &__toggle {}
 }

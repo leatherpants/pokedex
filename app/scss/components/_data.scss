@@ -1,15 +1,17 @@
+@use '../utils' as *;
+
 .data {
-  &__hp {}
+  margin-block: rem(20);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(10) rem(50);
+  padding-inline: 10%;
 
-  &__attack {}
-
-  &__defense {}
-
-  &__sp-attack {}
-
-  &__sp-defense {}
-
-  &__speed {}
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__title {}
 

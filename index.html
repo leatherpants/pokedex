@@ -18,24 +18,27 @@
 
 <body>
   <header class="header">
+    <div class="unvisible" aria-hidden="true">Dark Mode On On</div>
     <h1 class="header__title">Pok&eacute;mon Search App</h1>
     <form class="header__toggle toggle">
       <label for="dark" class="toggle__label">Dark Mode <span class="offscreen">On</span></label>
       <label for="light" class="toggle__label offscreen">Dark Mode Off</label>
       <div class="toggle__wrapper">
-        <input type="radio" name="theme" id="dark" class="toggle__radio">
         <input type="radio" name="theme" id="light" class="toggle__radio">
+        <input type="radio" name="theme" id="dark" class="toggle__radio">
         <div class="toggle__background"></div>
         <div class="toggle__button"></div>
       </div>
     </form>
   </header>
-  <main class="main">
+  <main class="main main--electric">
     <section class="search">
       <form class="search__form">
         <label for="search" class="search__title">Search for Pok&eacute;mon Name or ID:</label>
-        <input type="text" class="search__input" placeholder="pikachu">
-        <button type="submit" class="search__submit">Search</button>
+        <div>
+          <input type="text" class="search__input" placeholder="pikachu">
+          <button type="submit" class="search__submit">Search</button>
+        </div>
       </form>
     </section>
     <section class="hero">
@@ -44,39 +47,40 @@
       <h2 class="hero__name">Pikachu</h2>
       <p class="hero__id">#25</p>
       <div class="hero__types">
-        <div class="hero__type">
+        <div class="hero__type hero__type--electric">
           <p class="hero__type-name">electric</p>
         </div>
-        <div class="hero__type">
+        <div class="hero__type hero__type--normal">
           <p class="hero__type-name">normal</p>
         </div>
       </div>
     </section>
     <section class="data">
-      <div class="data__hp">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
-      <div class="data__attack">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
-      <div class="data__defense">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
-      <div class="data__sp-attack">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
-      <div class="data__sp-defense">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
-      <div class="data__speed">
+      <div class="data__card">
         <h3 class="data__title">HP:</h3>
         <p class="data__value">35</p>
       </div>
+
     </section>
   </main>
 </body>

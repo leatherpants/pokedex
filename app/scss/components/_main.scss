@@ -1,11 +1,20 @@
+@use '../utils' as *;
+
 .main {
-  width: 50vw;
-  max-width: 600px;
-  min-width: 300px;
+  width: clamp(300px, 50%, 600px);
   margin: auto;
-  margin-top: 50px;
+  margin-block: rem(20);
   background-color: var(--surface);
   color: var(--on-surface);
-  border: 5px solid var(--frame);
-  box-shadow: 10px 10px 0 0 var(--primary);
+  border: rem(5) solid var(--frame);
+  box-shadow: rem(10) rem(10) 0 0 var(--primary);
+
+  $types: fairy, steel, dark, dragon, ghost, rock, bug, psychic, flying, ground, poison, fighting, ice, grass, electric, water, fire, normal;
+
+  @each $type in $types {
+    &--#{$type} {
+      background: radial-gradient(circle farthest-side at 50% rem(-200), var(--#{$type}) 0 57%, var(--surface) 57%);
+    }
+  }
+
 }
