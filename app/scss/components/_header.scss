@@ -9,6 +9,7 @@
 
   @media only screen and (max-width: 710px) {
     flex-direction: column;
+    font-size: 80%;
 
     &__toggle {
       margin-top: rem(10);

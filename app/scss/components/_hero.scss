@@ -11,8 +11,6 @@
     margin: auto;
   }
 
-  &__wave {}
-
   &__name {
     text-transform: uppercase;
   }
@@ -30,9 +28,6 @@
 
   &__type {
     padding: rem(5);
-  }
-
-  &__type-name {
     font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 600;

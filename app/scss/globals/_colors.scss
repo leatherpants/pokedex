@@ -49,4 +49,30 @@
   --toggle-bg: var(--light-primary);
   --toggle-btn: var(--light-surface);
   --frame: var(--light-frame);
+
+  @media (prefers-color-scheme: dark) {
+    --surface: var(--dark-surface);
+    --on-surface: var(--dark-on-surface);
+    --primary-container: var(--dark-primary-container);
+    --on-primary-container: var(--dark-on-primary-container);
+    --secondary-container: var(--dark-secondary-container);
+    --primary: var(--dark-primary);
+    --on-primary: var(--dark-on-primary);
+    --toggle-bg: var(--dark-primary);
+    --toggle-btn: var(--dark-surface);
+    --frame: var(--dark-frame);
+  }
+}
+
+.dark {
+  --surface: var(--dark-surface);
+  --on-surface: var(--dark-on-surface);
+  --primary-container: var(--dark-primary-container);
+  --on-primary-container: var(--dark-on-primary-container);
+  --secondary-container: var(--dark-secondary-container);
+  --primary: var(--dark-primary);
+  --on-primary: var(--dark-on-primary);
+  --toggle-bg: var(--dark-primary);
+  --toggle-btn: var(--dark-surface);
+  --frame: var(--dark-frame);
 }

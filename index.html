@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <div class="unvisible" aria-hidden="true">Dark Mode On On</div>
     <h1 class="header__title">Pok&eacute;mon Search App</h1>
@@ -31,56 +32,62 @@
       </div>
     </form>
   </header>
+
   <main class="main main--electric">
+
     <section class="search">
       <form class="search__form">
         <label for="search" class="search__title">Search for Pok&eacute;mon Name or ID:</label>
         <div>
-          <input type="text" class="search__input" placeholder="pikachu">
-          <button type="submit" class="search__submit">Search</button>
+          <input id="search-input" type="text" class="search__input" placeholder="pikachu">
+          <button id="search-button" type="submit" class="search__submit">Search</button>
         </div>
       </form>
     </section>
+
     <section class="hero">
-      <img src="app/img/25.png" alt="pikachu" class="hero__img" width="100" height="100">
-      <div class="hero__wave"></div>
-      <h2 class="hero__name">Pikachu</h2>
-      <p class="hero__id">#25</p>
-      <div class="hero__types">
-        <div class="hero__type hero__type--electric">
-          <p class="hero__type-name">electric</p>
-        </div>
-        <div class="hero__type hero__type--normal">
-          <p class="hero__type-name">normal</p>
-        </div>
+      <img id="sprite" src="app/img/25.png" alt="pikachu" class="hero__img" width="100" height="100">
+      <h2 id="pokemon-name" class="hero__name">Pikachu</h2>
+      <p id="pokemon-id" class="hero__id">#25</p>
+      <div id="types" class="hero__types">
+        <p class="hero__type hero__type--electric">electric</p>
+        <p class="hero__type hero__type--normal">normal</p>
       </div>
     </section>
-    <section class="data">
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
-      <div class="data__card">
-        <h3 class="data__title">HP:</h3>
-        <p class="data__value">35</p>
-      </div>
 
+    <section class="data">
+      <div id="weight" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="height" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="hp" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="attack" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="defense" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="special-attack" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="special-defense" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
+      <div id="speed" class="data__card">
+        <h3 class="data__title">HP:</h3>
+        <p class="data__value">35</p>
+      </div>
     </section>
   </main>
 </body>

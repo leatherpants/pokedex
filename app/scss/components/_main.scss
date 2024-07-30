@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .main {
-  width: clamp(300px, 50%, 600px);
+  width: rem(350);
   margin: auto;
   margin-block: rem(20);
   background-color: var(--surface);

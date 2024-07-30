@@ -8,6 +8,7 @@
 @media only screen and (max-width: 710px) {
   .header {
     flex-direction: column;
+    font-size: 80%;
   }
   .header__toggle {
     margin-top: 0.625rem;
@@ -20,7 +21,7 @@
   color: var(--on-primary-container);
 }
 .main {
-  width: clamp(300px, 50%, 600px);
+  width: 21.875rem;
   margin: auto;
   margin-block: 1.25rem;
   background-color: var(--surface);
@@ -99,6 +100,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
+  color: var(--light-on-surface);
 }
 .search__input {
   border-radius: 1.25rem;
@@ -183,8 +185,6 @@
 }
 .hero__type {
   padding: 0.3125rem;
-}
-.hero__type-name {
   font-size: 0.7rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -304,6 +304,33 @@
   --toggle-btn: var(--light-surface);
   --frame: var(--light-frame);
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: var(--dark-surface);
+    --on-surface: var(--dark-on-surface);
+    --primary-container: var(--dark-primary-container);
+    --on-primary-container: var(--dark-on-primary-container);
+    --secondary-container: var(--dark-secondary-container);
+    --primary: var(--dark-primary);
+    --on-primary: var(--dark-on-primary);
+    --toggle-bg: var(--dark-primary);
+    --toggle-btn: var(--dark-surface);
+    --frame: var(--dark-frame);
+  }
+}
+
+.dark {
+  --surface: var(--dark-surface);
+  --on-surface: var(--dark-on-surface);
+  --primary-container: var(--dark-primary-container);
+  --on-primary-container: var(--dark-on-primary-container);
+  --secondary-container: var(--dark-secondary-container);
+  --primary: var(--dark-primary);
+  --on-primary: var(--dark-on-primary);
+  --toggle-bg: var(--dark-primary);
+  --toggle-btn: var(--dark-surface);
+  --frame: var(--dark-frame);
+}
 
 *,
 *::before,
@@ -317,11 +344,6 @@
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
   font-size: 100%;
-}
-@media screen and (max-width: 710px) {
-  :root {
-    font-size: 85%;
-  }
 }
 
 body {
