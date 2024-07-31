@@ -1,4 +1,4 @@
-const root = document.querySelector("html");
+const root = document.documentElement;
 
 //* POKEMON DATA
 const fetchUrl = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/";
@@ -7,34 +7,102 @@ const searchButton = document.getElementById("search-button");
 const nameView = document.getElementById("pokemon-name");
 const idView = document.getElementById("pokemon-id");
 const mainView = document.querySelector(".main");
-const imgView = document.getElementById("sprite");
+const typesView = document.querySelector(".hero__types");
+const dataView = document.querySelector("section.data");
+const heroSectionView = document.querySelector("section.hero");
+const imgContainerView = document.querySelector(".hero__img-container");
 
-searchButton.addEventListener("click", e => {
+searchButton.addEventListener("click", async e => {
   e.preventDefault();
-  const input = searchInput.value;
+  const input = searchInput.value.toLowerCase();
   if (input === '') return;
-  getPokemon(input);
+  await getPokemon(input);
 })
 
 async function getPokemon(nameOrId) {
+  try {
+    const data = await fetchData(nameOrId);
+    const pokemon = extractPokemonData(data);
+    updateUI(pokemon);
+  } catch (error) {
+    alert("Pokémon not found");
+  }
+}
+
+async function fetchData(nameOrId) {
   const response = await fetch(fetchUrl + nameOrId);
-  const pokemonData = await response.json();
-  const { name, id, height, weight, sprites: { front_default: img }, types: types_data, stats: stats_data } = pokemonData;
+  if (!response.ok) { // 404 NOT FOUND
+    throw new Error("Status Error.");
+  } else {
+    return await response.json();
+  }
+}
+
+function extractPokemonData(data) {
+  const { name, id, height, weight, sprites: { front_default: img }, types: types_data, stats: stats_data } = data;
   const types = types_data.map(type_data => type_data.type.name)
   const stats = stats_data.map(stat_data => ({
     name: stat_data.stat.name,
     value: stat_data.base_stat
   }));
-
+  stats.unshift({ name: "height", value: height });
+  stats.unshift({ name: "weight", value: weight });
+  return {
+    name,
+    id,
+    img,
+    types,
+    stats
+  };
 }
 
+function updateUI(pokemon) {
+  nameView.textContent = pokemon.name;
+  idView.textContent = '#' + pokemon.id;
+  setTypesView(pokemon.types);
+  setDataView(pokemon.stats);
+  setMainBackground(pokemon.types[0]);
+  const imgView = getImgView(pokemon.img, pokemon.name);
+  setPokemonImg(imgView);
+}
 
+function setTypesView(types) {
+  typesView.innerHTML = types.map(type =>
+    `<p class="hero__type hero__type--${type}">${type}</p>`)
+    .join('');
+}
 
+function setDataView(stats) {
+  dataView.innerHTML = stats.map(stat =>
+    `
+      <div class="data__card">
+      <h3 class="data__title">${stat.name.replace("special-", "sp. ")}</h3>
+          <p id="${stat.name}" class="data__value">${stat.value}</p>
+        </div>
+        `
+  ).join('');
+}
 
+function setMainBackground(type) {
+  root.style.setProperty("--type", `var(--${type})`);
+}
 
+function getImgView(src, alt) {
+  const imgView = new Image()
+  imgView.id = "sprite";
+  imgView.className = "hero__img";
+  imgView.src = src;
+  imgView.alt = alt;
+  imgView.width = 100;
+  imgView.height = 100;
+  return imgView;
+}
 
-
-
+function setPokemonImg(imgView) {
+  imgContainerView.style.height = "auto";
+  imgContainerView.innerHTML = "";
+  imgContainerView.appendChild(imgView);
+}
 
 //* TOGGLE 
 const USER_PREFERED_COLOR_SCHEME = "USER_PREFERED_COLOR_SCHEME";

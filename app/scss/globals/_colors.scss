@@ -18,7 +18,7 @@
   --fire: #FF4422;
   --normal: #AAAA99;
 
-  --type-color: var(--normal);
+  --type: var(--normal);
 
   --light-surface: #f9faef;
   --light-on-surface: #1a1c16;
@@ -46,8 +46,8 @@
   --secondary-container: var(--light-secondary-container);
   --primary: var(--light-primary);
   --on-primary: var(--light-on-primary);
-  --toggle-bg: var(--light-primary);
-  --toggle-btn: var(--light-surface);
+  --toggle-bg: darkgray;
+  --toggle-btn: hsl(0, 0%, 90%);
   --frame: var(--light-frame);
 
   @media (prefers-color-scheme: dark) {

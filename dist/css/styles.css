@@ -25,63 +25,10 @@
   margin: auto;
   margin-block: 1.25rem;
   background-color: var(--surface);
+  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--type) 0 50%, var(--surface) 50%);
   color: var(--on-surface);
   border: 0.3125rem solid var(--frame);
   box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
-}
-.main--fairy {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--fairy) 0 57%, var(--surface) 57%);
-}
-.main--steel {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--steel) 0 57%, var(--surface) 57%);
-}
-.main--dark {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--dark) 0 57%, var(--surface) 57%);
-}
-.main--dragon {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--dragon) 0 57%, var(--surface) 57%);
-}
-.main--ghost {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--ghost) 0 57%, var(--surface) 57%);
-}
-.main--rock {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--rock) 0 57%, var(--surface) 57%);
-}
-.main--bug {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--bug) 0 57%, var(--surface) 57%);
-}
-.main--psychic {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--psychic) 0 57%, var(--surface) 57%);
-}
-.main--flying {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--flying) 0 57%, var(--surface) 57%);
-}
-.main--ground {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--ground) 0 57%, var(--surface) 57%);
-}
-.main--poison {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--poison) 0 57%, var(--surface) 57%);
-}
-.main--fighting {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--fighting) 0 57%, var(--surface) 57%);
-}
-.main--ice {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--ice) 0 57%, var(--surface) 57%);
-}
-.main--grass {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--grass) 0 57%, var(--surface) 57%);
-}
-.main--electric {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--electric) 0 57%, var(--surface) 57%);
-}
-.main--water {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--water) 0 57%, var(--surface) 57%);
-}
-.main--fire {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--fire) 0 57%, var(--surface) 57%);
-}
-.main--normal {
-  background: radial-gradient(circle farthest-side at 50% -12.5rem, var(--normal) 0 57%, var(--surface) 57%);
 }
 
 .search__form {
@@ -127,6 +74,7 @@
 }
 .toggle__label {
   line-height: 1.5625rem;
+  color: var(--on-surface);
 }
 .toggle__wrapper {
   position: relative;
@@ -165,9 +113,12 @@
 .hero {
   padding-inline: 10%;
 }
+.hero__img-container {
+  height: 30vh;
+}
 .hero__img {
   display: block;
-  width: 70%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
@@ -252,11 +203,14 @@
   gap: 0.625rem 3.125rem;
   padding-inline: 10%;
 }
-.data__card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.data__title {
+  text-transform: capitalize;
+  font-size: 1rem;
 }
+.data__value {
+  margin-top: 0.3125rem;
+}
+
 :root {
   --fairy: #EE99EE;
   --steel: #AAAABB;
@@ -276,7 +230,7 @@
   --water: #3399FF;
   --fire: #FF4422;
   --normal: #AAAA99;
-  --type-color: var(--normal);
+  --type: var(--normal);
   --light-surface: #f9faef;
   --light-on-surface: #1a1c16;
   --light-primary-container: #cdeda3;
@@ -300,8 +254,8 @@
   --secondary-container: var(--light-secondary-container);
   --primary: var(--light-primary);
   --on-primary: var(--light-on-primary);
-  --toggle-bg: var(--light-primary);
-  --toggle-btn: var(--light-surface);
+  --toggle-bg: darkgray;
+  --toggle-btn: hsl(0, 0%, 90%);
   --frame: var(--light-frame);
 }
 @media (prefers-color-scheme: dark) {

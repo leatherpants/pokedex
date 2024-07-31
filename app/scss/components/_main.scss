@@ -5,16 +5,9 @@
   margin: auto;
   margin-block: rem(20);
   background-color: var(--surface);
+  background: radial-gradient(circle farthest-side at 50% rem(-200), var(--type) 0 50%, var(--surface) 50%);
   color: var(--on-surface);
   border: rem(5) solid var(--frame);
   box-shadow: rem(10) rem(10) 0 0 var(--primary);
-
-  $types: fairy, steel, dark, dragon, ghost, rock, bug, psychic, flying, ground, poison, fighting, ice, grass, electric, water, fire, normal;
-
-  @each $type in $types {
-    &--#{$type} {
-      background: radial-gradient(circle farthest-side at 50% rem(-200), var(--#{$type}) 0 57%, var(--surface) 57%);
-    }
-  }
 
 }
